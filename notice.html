@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>比赛公告</title>
+    <link rel="stylesheet" type="text/css" href="./css/app/app.css">
+    <script type="text/javascript" src="./js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/lib/baiduTemplate.js"></script>
+</head>
+<body style="background: #F9F9F9;">
+<div class="contain notice">
+    <div class="logo">
+        <header>
+            <img src="./img/logo_other.png"/>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="apply.html">报名指南</a></li>
+                <li><a href="javascript:void(0);">比赛公告</a></li>
+                <li><a href="itemList.html">项目列表</a></li>
+                <li><a href="aboutUs.html">联系我们</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="content"></div>
+    <footer>
+        <ul>
+            <li class="fo-img">
+                <img src="./img/logo_index.png"/>
+            </li>
+            <li>
+                <p>指导单位</p>
+                <p>武汉市民政局</p>
+            </li>
+            <li>
+                <p>主办单位</p>
+                <p>武汉市社会组织发展基金会</p>
+            </li>
+            <li class="fo-last">
+                <p>友情链接</p>
+                <p>武汉市社会组织发展基金会</p>
+            </li>
+        </ul>
+    </footer>
+</div>
+<!--百度模板生成公告列表-->
+<script type="text/html" id="noticeTmpId">
+    <%for(var i=0;i<feed.length;i++){%>
+    <div class="no-list">
+        <span class="icon icon-circle"></span>
+        <div class="no-explain">
+            <p>官方公告</p>
+            <p class="no-time"><%=feed[i].create_time%></p>
+        </div>
+        <div class="no-info box">
+            <p class="no-dot"><%=feed[i].content%></p>
+            <img src= <%=feed[i].image%>>
+        </div>
+        <span class="clearfix"></span>
+    </div>
+    <%}%>
+</script>
+</body>
+<script type="text/javascript" src="./js/app/notice.js"></script>
+<!--<script type="text/javascript" src="js/require.js" data-main="js/main"></script>-->
+</html>

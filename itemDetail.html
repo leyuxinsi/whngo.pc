@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>项目详情</title>
+    <link rel="stylesheet" type="text/css" href="./sweetalert/sweetalert.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/app/app.css">
+
+    <script type="text/javascript" src="./js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript" src="./js/lib/baiduTemplate.js"></script>
+</head>
+<body>
+<div class="contain itemDetail">
+    <div class="logo">
+        <header>
+            <img src="./img/logo_other.png"/>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="apply.html">报名指南</a></li>
+                <li><a href="notice.html">比赛公告</a></li>
+                <li><a href="itemList.html">项目列表</a></li>
+                <li><a href="aboutUs.html">联系我们</a></li>
+            </ul>
+        </header>
+    </div>
+    <div class="content">
+        <div class="il-title">
+            <div class="mask"></div>
+        </div>
+        <div class="support-btn"><a href="Javascript:void(0);" id="support_btn">我要支持</a></div>
+        <div class="il-arctile">
+
+        </div>
+        <div class="il-support">
+            <img src="./img/supporter.png"/>
+            <ul class="il-supporters"></ul>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li class="fo-img">
+                <img src="./img/logo_index.png"/>
+            </li>
+            <li>
+                <p>指导单位</p>
+                <p>武汉市民政局</p>
+            </li>
+            <li>
+                <p>主办单位</p>
+                <p>武汉市社会组织发展基金会</p>
+            </li>
+            <li class="fo-last">
+                <p>友情链接</p>
+                <p>武汉市社会组织发展基金会</p>
+                <!--？？？武汉市社会组织发展基金会1-->
+            </li>
+        </ul>
+    </footer>
+</div>
+<!--百度模板生成项目详情头部-->
+<script type="text/html" id="itemDetailTitleTmpId">
+    <img src= <%=header_cover%>>
+    <div class="il-head">
+        <span><img src= <%=project_info.headimg%>></span>
+    </div>
+    <p class="il-name"><%=project_info.user_nickname%></p>
+    <p class="il-unit"><%=project_info.pro_company%></p>
+    <h3><%=project_info.pro_name%></h3>
+</script>
+<!--百度模板生成项目详情内容-->
+<script type="text/html" id="itemDetailContentTmpId">
+    <div class="il-text"><%=project_info.pro_content%></div>
+    <div class="li-img">
+        <%for(var i=0;i<pro_img.length;i++){%>
+        <img src= <%=pro_img[i].img_url%>>
+        <%}%>
+    </div>
+</script>
+<!--百度模板生成支持列表-->
+<script type="text/html" id="itemDetailSupportTmpId">
+    <%for(var i=0;i<support.length;i++){%>
+    <li>
+        <span class="il-support-img">
+            <img src= <%=support[i].headimg%>>
+        </span>
+        <div class="il-support-info">
+            <p><%=support[i].user_nickname%>：支持了<span class="il-support-money"><%=support[i].total_price%></span>元</p>
+            <p class="il-support-text"><%=support[i].word%></p>
+            <p class="il-support-time"><%=support[i].create_time%></p>
+        </div>
+    </li>
+    <%}%>
+</script>
+</body>
+<script type="text/javascript" src="./js/app/itemDetail.js"></script>
+</html>

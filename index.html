@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="./css/lib/jcountdown.css">
+	<link rel="stylesheet" type="text/css" href="./css/lib/swiper-3.4.2.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app/app.css">
+	<script type="text/javascript" src="./js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="./js/lib/swiper-3.4.2.jquery.min.js"></script>
+	<script type="text/javascript" src="./js/lib/jquery.jcountdown.min.js"></script>
+	<script type="text/javascript" src="./js/lib/baiduTemplate.js"></script>
+</head>
+<body>
+<div class="contain index">
+    <div class="sign-in">
+
+    </div>
+	<div class="logo">
+		<header>
+			<img src="./img/logo_index.png"/>
+			<ul class="nav">
+				<li><a href="javascript:void(0);">首页</a></li>
+				<li><a href="apply.html">报名指南</a></li>
+				<li><a href="notice.html">比赛公告</a></li>
+				<!--<li><a href="event.html">赛事动态</a></li>-->
+				<li><a href="itemList.html">项目列表</a></li>
+				<li><a href="aboutUs.html">联系我们</a></li>
+			</ul>
+		</header>
+		<div class="one-pix">
+			<div class="left">
+				<h2>汉公益公众平台</h2>
+				<h2>武汉市社会组织发展基金会</h2>
+                <p>项目支持总数</p>
+				<div class="countdown">
+                    <div class="jCountdownContainer">
+                        <div class="jCountdown flip black">
+                            <div class="group day" style="margin-right: 15px;">
+                                <div class="container item1" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: -450px -896px;"></div>
+                                </div>
+                                <div class="container item2" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: -450px -896px;"></div>
+                                </div>
+                                <div class="container item2" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: -450px -896px;"></div>
+                                </div>
+                                <div class="container item2" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: -450px -896px;"></div>
+                                </div>
+                                <div class="container item2" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: -450px -896px;"></div>
+                                </div>
+                                <!--<div class="container item3 lastItem" style="margin-right: 0px;">
+                                    <div class="text" style="background-position: 0px -896px;"></div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				<!--<a class="apply_btn" href="apply.html">大赛报名</a>-->
+			</div>
+			<div class="right">
+			</div>
+			<span class="clearfix"></span>
+		</div>
+	</div>
+	<div class="project-title"><img src="img/supportUnit/project.png" alt=""></div>
+	<div class="banner">
+	</div>
+    <div class="more-link"><a href="http://www.whngo.com/itemList.html">查看更多</a></div>
+	<div class="in-notice">
+		<img src="./img/in_notice.png">
+		<div class="items"></div>
+	</div>
+	<div class="in-support">
+		<img src="./img/new_vote.png">
+		<div>
+			<span class="icon-quotain-left"></span>
+			<span class="icon-quotain-right"></span>
+			<div class="in-comment"></div>
+		</div>
+	</div>
+	<div class="in-unit">
+		<img src="./img/supportUnit/unit.png"/>
+		<div>
+			<div><img src="./img/supportUnit/001.jpg"/></div>
+			<div><img src="./img/supportUnit/002.jpg"/></div>
+			<div class="no-right"><img src="./img/supportUnit/003.png"/></div>
+			<div><img src="./img/supportUnit/004.png"/></div>
+			<div><img src="./img/supportUnit/005.jpg"/></div>
+			<div class="no-right"><img src="./img/supportUnit/006.png"/></div>
+			<div class="no-bottom"><img src="./img/supportUnit/007.jpg"/></div>
+			<div class="no-bottom"><img width="150" src="./img/supportUnit/008.jpg"/></div>
+			<div class="no-right no-bottom"><img src="./img/supportUnit/009.jpg"/></div>
+		</div>
+	</div>
+	<footer>
+		<ul>
+			<li class="fo-img">
+				<img src="./img/logo_index.png"/>
+			</li>
+			<li>
+				<p>指导单位</p>
+				<p>武汉市民政局</p>
+			</li>
+			<li>
+				<p>主办单位</p>
+				<p>武汉市社会组织发展基金会</p>
+			</li>
+			<li class="fo-last">
+				<p>友情链接</p>
+				<p>武汉市社会组织发展基金会</p>
+				<!--？？？武汉市社会组织发展基金会1-->
+			</li>
+		</ul>
+	</footer>
+</div>
+
+<!--百度模板生成轮播-->
+<script type="text/html" id="swipperTmpId">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<%for(var i=0;i<banner.length;i++){%>
+				<div class="swiper-slide">
+					<a target="_blank" href= <%=banner[i].link_url%>>
+						<img src= <%=banner[i].img_url%>>
+					</a>
+				</div>
+			<%}%>
+		</div>
+		<!-- 如果需要分页器 -->
+		<div class="swiper-pagination"></div>
+		<!-- 如果需要导航按钮 -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
+</script>
+<!--百度模板生成banner-->
+<script type="text/html" id="indexBannerTmpId">
+	<%for(var i=0;i<project_cover.length;i++){%>
+		<%if(i==0 || i==4){%>
+		<div>
+			<a target="_blank" href="http://www.whngo.com/itemDetail.html?project_id=<%=project_cover[i].project_id %>"><img src= <%=project_cover[i].cover%>></a>
+		</div>
+		<%}%>
+		<%if(i==1){%>
+		<div class="in-banner">
+			<div>
+				<a target="_blank" href="http://www.whngo.com/itemDetail.html?project_id=<%=project_cover[i].project_id %>"><img src= <%=project_cover[i].cover%>></a>
+			</div>
+			<div>
+				<a target="_blank" href="http://www.whngo.com/itemDetail.html?project_id=<%=project_cover[i].project_id %>"><img src= <%=project_cover[i+1].cover%>></a>
+			</div>
+		</div>
+		<%}%>
+		<%if(i==3){%>
+		<div class="in-banner">
+			<a target="_blank" href="http://www.whngo.com/itemDetail.html?project_id=<%=project_cover[i].project_id %>"><img src= <%=project_cover[i].cover%>></a>
+		</div>
+		<%}%>
+	<%}%>
+</script>
+<!--百度模板生成公告-->
+<script type="text/html" id="indexNoticeTmpId">
+    <div class="inner">
+        <%for(var i=0;i<feed.length;i++){%>
+        <a href="http://www.whngo.com/notice.html">
+            <div class="item">
+                <img src= <%=feed[i].image%>>
+                <p><%=feed[i].content%></p>
+            </div>
+        </a>
+        <%}%>
+    </div>
+</script>
+<!--百度模板生成评论-->
+<script type="text/html" id="indexCommentTmpId">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <%for(var i=0;i<comment.length;i++){%>
+            <div class="swiper-slide">
+                <div class="item">
+                    <span class="in-support-img">
+                    <img src= <%=comment[i].headimg%>>
+                </span>
+                    <span class="in-support-text">
+                    <%=comment[i].user_nickname%>,支持<%=comment[i].total_price%>元 :<%=comment[i].word%>
+                </span>
+                    <span class="in-support-time">2017-9-27</span>
+                </div>
+            </div>
+            <%}%>
+        </div>
+    </div>
+</script>
+</body>
+<script type="text/javascript" src="./js/app/index.js"></script>
+<!--<script type="text/javascript" src="js/require.js" data-main="js/main"></script>-->
+</html>
