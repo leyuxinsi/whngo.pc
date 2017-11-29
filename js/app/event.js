@@ -23,6 +23,7 @@ function getMore(pn) {
 				if(!data.next_load && $(".itemList .showmore").length > 0){
 					$(".event .content .showmore").addClass("hide");
 				}
+                friendLinks();
 			}
 		}
 	});

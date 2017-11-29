@@ -32,6 +32,7 @@ function getMore(pn) {
 				if(!data.next_load && $(".itemList .showmore").length > 0){
 					$(".itemList .content .showmore").addClass("hide");
 				}
+                friendLinks();
 			}
 		}
 	});

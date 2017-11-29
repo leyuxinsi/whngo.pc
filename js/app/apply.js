@@ -10,6 +10,7 @@ $(function () {
 				//百度模板生成公告数据
 				var applyStr = baidu.template("applyTmpId",data.content);
 				$(".apply .content").html(applyStr);
+                friendLinks();
 			}
 		}
 	});

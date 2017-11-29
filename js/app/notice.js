@@ -11,6 +11,7 @@ $(function () {
 				var noticeStr = baidu.template("noticeTmpId",data);
 				$(".notice .content").html(noticeStr);
 				handleDot();
+                friendLinks();
 			}
 		}
 	});

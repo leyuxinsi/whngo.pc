@@ -10,6 +10,7 @@ $(function () {
 				//百度模板生成详情数据
 				var eventDetailTitleStr = baidu.template("eventDetailContentTmpId",data.news_info);
 				$(".eventDetail .content").append(eventDetailTitleStr);
+                friendLinks();
 			}
 		}
 	});

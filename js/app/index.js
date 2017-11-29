@@ -35,9 +35,12 @@ $(function () {
                 });
 
                 $("#fixed_sign_box_src").attr('src',data.sign_enter);
+                friendLinks();
             }
         }
     });
+
+
 });
 
 //倒计时函数

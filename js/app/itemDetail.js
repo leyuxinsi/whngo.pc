@@ -14,6 +14,7 @@ $(function () {
 				//百度模板生成详情content数据
 				var itemDetailContentStr = baidu.template("itemDetailContentTmpId",data);
 				$(".itemDetail .content .il-arctile").html(itemDetailContentStr);
+                friendLinks();
 			}
 		}
 	});
