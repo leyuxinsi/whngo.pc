@@ -1,12 +1,11 @@
 $(function () {
     $.ajax({
         type:"post",
-        url:"http://whngo.bidianer.com",
+        url:"http://api.whngo.com",
         dataType:"jsonp",
         jsonpCallback:"callback",
         success:function(data){
             if(data.code === 1){
-                console.log(data)
                 var end_time = data.end_time.date_time.replace(/-/g,"/");
                 getEndtime(end_time);
                 //百度模板生成轮播图数据
@@ -34,6 +33,8 @@ $(function () {
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev'
                 });
+
+                $("#fixed_sign_box_src").attr('src',data.sign_enter);
             }
         }
     });

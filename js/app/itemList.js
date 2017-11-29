@@ -15,7 +15,7 @@ function handleDot() {
 function getMore(pn) {
 	$.ajax({
 		type:"post",
-		url:"http://whngo.bidianer.com/project",
+		url:"http://api.whngo.com/project",
 		data:"page="+pn+"&page_size=10",
 		dataType:"jsonp",
 		jsonpCallback:"callback",

@@ -2,7 +2,7 @@ const pro_id = window.location.search.slice(1);
 var pn = 2;
 $(function () {
 	$.ajax({
-		url:"http://whngo.bidianer.com/project/item",
+		url:"http://api.whngo.com/project/item",
 		data:pro_id,
 		dataType:"jsonp",
 		success:function(data){
@@ -27,7 +27,7 @@ $(document).on("click",".itemDetail .showmore",function () {
 
 function getSupport(pn,pro_id) {
 	$.ajax({
-		url:"http://whngo.bidianer.com/project/support",
+		url:"http://api.whngo.com/project/support",
 		data:pro_id+"&page="+pn+"&page_size=10",
 		dataType:"jsonp",
 		success:function(data){
@@ -52,7 +52,7 @@ $("#support_btn").on('click',function () {
     swal({
         title: "扫码去手机支持",
         text: "扫描上图的二维码，即可去手机页面投票",
-        imageUrl: "http://whngo.bidianer.com/project/qr-code?"+pro_id,
+        imageUrl: "http://api.whngo.com/project/qr-code?"+pro_id,
         imageSize:"162x162",
         confirmButtonText:"关闭",
         confirmButtonColor:"#cb0101",

@@ -1,7 +1,7 @@
 $(function () {
 	var news_id = window.location.search.slice(1);
 	$.ajax({
-		url:"http://whngo.bidianer.com/news/item",
+		url:"http://api.whngo.com/news/item",
 		data:news_id,
 		dataType:"jsonp",
 		success:function(data){

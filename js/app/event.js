@@ -6,7 +6,7 @@ $(function () {
 function getMore(pn) {
 	$.ajax({
 		type:"post",
-		url:"http://whngo.bidianer.com/news",
+		url:"http://api.whngo.com/news",
 		data:"page="+pn+"&page_size=10",
 		dataType:"jsonp",
 		jsonpCallback:"callback",

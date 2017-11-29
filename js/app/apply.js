@@ -1,7 +1,7 @@
 $(function () {
 	$.ajax({
 		type:"post",
-		url:"http://whngo.bidianer.com/news/sign-guide",
+		url:"http://api.whngo.com/news/sign-guide",
 		dataType:"jsonp",
 		jsonpCallback:"callback",
 		success:function(data){
